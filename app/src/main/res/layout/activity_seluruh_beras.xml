@@ -22,7 +22,7 @@
         android:layout_height="wrap_content"
         style="?android:attr/borderlessButtonStyle"
         android:drawableLeft="@drawable/icon_add"
-        android:text="Buat Biodata Baru"
+        android:text="Buat List Beras Baru"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />

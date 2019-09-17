@@ -1,6 +1,8 @@
 package com.battistradadeveloper.smartfarm;
 
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.CardView;
@@ -41,14 +43,36 @@ public class MainActivity extends AppCompatActivity {
 		cd_input.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				Intent input = new Intent(MainActivity.this, Input.class);
-				startActivity(input);
+				Intent menu_input = new Intent(MainActivity.this, MenuInput.class);
+				startActivity(menu_input);
 			}
 		});
 
 		cd_about = findViewById(R.id.card_about);
 
 		cd_logout = findViewById(R.id.card_logout);
+		cd_logout.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+				builder.setMessage("Apakah anda yakin ingin keluar?")
+						.setCancelable(false)
+						.setPositiveButton("Yakin", new DialogInterface.OnClickListener() {
+							@Override
+							public void onClick(DialogInterface dialog, int which) {
+								Intent logoutproses = new Intent(MainActivity.this, MainActivity.class);
+								startActivity(logoutproses);
+							}
+						})
+						.setNegativeButton("Tidak", new DialogInterface.OnClickListener() {
+							public void onClick(DialogInterface dialog, int id) {
+								dialog.cancel();
+							}
+						});
+				AlertDialog alert = builder.create();
+				alert.show();
+			}
+		});
 
 	}
 
