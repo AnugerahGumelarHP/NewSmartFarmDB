@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/padding"
+    tools:context=".CRUD.UpdateBeras">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:background="@drawable/roun_rect_white"
+        >
+        <!--Teks Info-->
+        <TextView
+            android:id="@+id/txt_input_update"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/update_data_beras"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:layout_margin="10dp"/>
+
+        <!--Nomor Beras-->
+        <TextView
+            android:id="@+id/txt_input_nomor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/nomor_beras"
+            android:textStyle="bold"/>
+        <EditText
+            android:id="@+id/edt_input_nomor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/masukkan_nomor_beras"
+            android:inputType="textCapWords"
+            android:maxLines="1"/>
+
+
+        <!--Nama Beras-->
+        <TextView
+            android:id="@+id/txt_input_nama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/nama_beras"
+            android:textStyle="bold"/>
+        <EditText
+            android:id="@+id/edt_input_nama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/masukkan_nama_beras"
+            android:inputType="textCapWords"
+            android:maxLines="1"/>
+
+        <!--Jenis Beras-->
+        <TextView
+            android:id="@+id/txt_input_jenis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/jenis_beras"
+            android:textStyle="bold"/>
+        <Spinner
+            android:id="@+id/spinnerType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/type"/>
+
+        <!--Tahun Panen-->
+        <TextView
+            android:id="@+id/txt_input_tahun"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/tahun_panen"
+            android:textStyle="bold"/>
+        <Spinner
+            android:id="@+id/spinnerYear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/year"/>
+
+        <!--Harga Beras-->
+        <TextView
+            android:id="@+id/txt_input_harga"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/harga_beras"
+            android:textStyle="bold"/>
+        <EditText
+            android:id="@+id/edt_input_harga"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/masukkan_harga_beras"
+            android:inputType="numberDecimal"/>
+
+        <!--Deskripsi Beras-->
+        <TextView
+            android:id="@+id/txt_input_deskripsi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/deskripsi_beras"
+            android:textStyle="bold"/>
+        <EditText
+            android:id="@+id/edt_input_deskripsi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/masukkan_deskripsi_beras"
+            android:inputType="text"/>
+
+        <!--Nama Penjual-->
+        <TextView
+            android:id="@+id/txt_input_nama_penjual"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/nama_penjual"
+            android:textStyle="bold"/>
+        <EditText
+            android:id="@+id/edt_input_nama_penjual"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/masukkan_nama_penjual"/>
+
+        <!--Alamat Penjual-->
+        <TextView
+            android:id="@+id/txt_input_alamat_penjual"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/jarak_penjual"
+            android:textStyle="bold"/>
+        <EditText
+            android:id="@+id/edt_input_alamat_penjual"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/masukkan_alamat_penjual"
+            android:inputType="numberDecimal"/>
+
+        <!--Button Simpan-->
+        <TextView
+            android:id="@+id/fitur_input_simpan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/simpan_data"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/roun_rect_blue"/>
+
+    </LinearLayout>
+
+</ScrollView>

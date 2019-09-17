@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/padding"
+    tools:context=".CRUD.LihatBeras">
+
+    <TextView
+        android:id="@+id/txt_detail_no"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="104dp"
+        android:layout_marginTop="20dp"
+        android:text="Nomor" />
+
+    <TextView
+        android:id="@+id/txt_detail_nama"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/txt_detail_no"
+        android:layout_below="@+id/txt_detail_no"
+        android:layout_marginTop="20dp"
+        android:text="Nama" />
+
+    <TextView
+        android:id="@+id/txt_detail_jenis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/txt_detail_nama"
+        android:layout_below="@+id/txt_detail_nama"
+        android:layout_marginTop="20dp"
+        android:text="Jenis" />
+
+    <TextView
+        android:id="@+id/txt_detail_tahun"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/txt_detail_jenis"
+        android:layout_below="@+id/txt_detail_jenis"
+        android:layout_marginTop="20dp"
+        android:text="Tahun" />
+
+    <TextView
+        android:id="@+id/txt_detail_harga"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/txt_detail_tahun"
+        android:layout_below="@+id/txt_detail_tahun"
+        android:layout_marginTop="20dp"
+        android:text="Harga" />
+
+    <TextView
+        android:id="@+id/txt_detail_deskripsi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/txt_detail_harga"
+        android:layout_below="@+id/txt_detail_harga"
+        android:layout_marginTop="20dp"
+        android:text="Deskripsi" />
+
+    <TextView
+        android:id="@+id/txt_detail_penjual"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/txt_detail_deskripsi"
+        android:layout_below="@+id/txt_detail_deskripsi"
+        android:layout_marginTop="20dp"
+        android:text="Penjual" />
+
+    <TextView
+        android:id="@+id/txt_detail_alamat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/txt_detail_penjual"
+        android:layout_below="@+id/txt_detail_penjual"
+        android:layout_marginTop="20dp"
+        android:text="Alamat" />
+
+    <TextView
+        android:id="@+id/Txt_alamat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/txt_detail_alamat"
+        android:layout_alignBottom="@+id/txt_detail_alamat"
+        android:layout_alignStart="@+id/Txt_harga"
+        android:text="@string/jarak_penjual" />
+
+    <TextView
+        android:id="@+id/Txt_penjual"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/txt_detail_penjual"
+        android:layout_alignBottom="@+id/txt_detail_penjual"
+        android:layout_alignStart="@+id/Txt_deskripsi"
+        android:text="@string/nama_penjual" />
+
+    <TextView
+        android:id="@+id/Txt_deskripsi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/txt_detail_deskripsi"
+        android:layout_alignBottom="@+id/txt_detail_deskripsi"
+        android:layout_alignStart="@+id/Txt_harga"
+        android:text="@string/deskripsi_beras" />
+
+    <TextView
+        android:id="@+id/Txt_harga"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/txt_detail_harga"
+        android:layout_alignBottom="@+id/txt_detail_harga"
+        android:layout_alignStart="@+id/Txt_tahun"
+        android:text="@string/harga_beras" />
+
+    <TextView
+        android:id="@+id/Txt_tahun"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/txt_detail_tahun"
+        android:layout_alignBottom="@+id/txt_detail_tahun"
+        android:layout_alignStart="@+id/Txt_jenis"
+        android:text="@string/tahun_panen" />
+
+    <TextView
+        android:id="@+id/Txt_jenis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/txt_detail_jenis"
+        android:layout_alignBottom="@+id/txt_detail_jenis"
+        android:layout_alignStart="@+id/Txt_nama"
+        android:text="@string/jenis_beras" />
+
+    <TextView
+        android:id="@+id/Txt_nama"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/txt_detail_nama"
+        android:layout_alignBottom="@+id/txt_detail_nama"
+        android:layout_alignStart="@+id/Txt_nomor"
+        android:text="@string/nama_beras" />
+
+    <TextView
+        android:id="@+id/Txt_nomor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/txt_detail_no"
+        android:layout_alignParentStart="true"
+        android:text="@string/nomor_beras" />
+
+    <Button
+        android:id="@+id/btn_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/Txt_alamat"
+        android:layout_below="@+id/Txt_alamat"
+        android:layout_marginTop="34dp"
+        android:text="@string/kembali"
+        style="?android:attr/borderlessButtonStyle"
+        android:drawableStart="@drawable/ic_arrow"/>
+</RelativeLayout>

@@ -1,0 +1,43 @@
+<resources>
+    <array name="type">
+        <item>Beras Putih</item>
+        <item>Beras Merah</item>
+        <item>Beras Hitam</item>
+    </array>
+    <array name="year">
+        <item>Tahun ini</item>
+        <item>Tahun lalu</item>
+    </array>
+    <string name="app_name">Smartfarm</string>
+    <string name="welcome_to_smartfarm">Welcome to Smartfarm</string>
+    <string name="introduction_smartfarm">Introduction Smartfarm</string>
+    <string name="rekomendasi">Rekomendasi</string>
+    <string name="seluruh_beras">Seluruh Beras</string>
+    <string name="beras_putih">Beras Putih</string>
+    <string name="beras_merah">Beras Merah</string>
+    <string name="beras_hitam">Beras Hitam</string>
+    <string name="input_beras">Input Beras</string>
+    <string name="about_app">About App</string>
+    <string name="logout_aplikasi">Logout Aplikasi</string>
+    <string name="data_beras">Data Beras</string>
+    <string name="masukkan_alamat_penjual">Masukkan dalam satuan km</string>
+    <string name="jarak_penjual">Jarak Penjual</string>
+    <string name="masukkan_nama_penjual">Masukkan nama penjual</string>
+    <string name="nama_penjual">Nama Penjual</string>
+    <string name="masukkan_deskripsi_beras">Masukkan deskripsi beras</string>
+    <string name="simpan_data">Simpan</string>
+    <string name="deskripsi_beras">Deskripsi Beras</string>
+    <string name="masukkan_harga_beras">Masukkan harga beras</string>
+    <string name="harga_beras">Harga Beras</string>
+    <string name="tahun_panen">Tahun Panen</string>
+    <string name="jenis_beras">Jenis Beras</string>
+    <string name="masukkan_nama_beras">Masukkan nama beras</string>
+    <string name="nama_beras">Nama Beras</string>
+
+    <string name="masukkan_nomor_beras">Masukkan Nomor Beras</string>
+
+    <string name="nomor_beras">Nomor Beras</string>
+    <string name="update_data_beras">Update Data Beras</string>
+    <string name="kembali">Kembali</string>
+    <string name="nama">Nama</string>
+</resources>
