@@ -41,4 +41,17 @@
     <string name="kembali">Kembali</string>
     <string name="nama">Nama</string>
     <string name="welcome_text">Selamat datang di smartfarm</string>
+    <string name="Home">Home</string>
+    <string name="discover">Discover</string>
+    <string name="account">Account</string>
+    <string name="title_activity_pembeli">PembeliActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="search_hint">Menu Sehat Apa Hari Ini?</string>
+    <string name="email">Email</string>
+    <string name="input_email">Masukkan Email Anda</string>
+    <string name="password">Password</string>
+    <string name="input_password">Masukkan Password Anda</string>
+    <string name="login">LOGIN</string>
 </resources>

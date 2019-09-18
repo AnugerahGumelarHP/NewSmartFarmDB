@@ -10,7 +10,8 @@
         android:roundIcon="@drawable/logoround"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Admin.BerasHitam"></activity>
+        <activity android:name=".Pembeli.PembeliActivity"></activity>
+        <activity android:name=".Admin.BerasHitam" />
         <activity android:name=".Admin.BerasMerah" />
         <activity android:name=".Admin.BerasPutih" />
         <activity

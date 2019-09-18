@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.battistradadeveloper.smartfarm.Admin.MainActivity;
+import com.battistradadeveloper.smartfarm.Pembeli.PembeliActivity;
 
 public class Splashscreen extends AppCompatActivity {
 	private int waktu_loading = 4000;
@@ -17,7 +18,7 @@ public class Splashscreen extends AppCompatActivity {
 		new Handler().postDelayed(new Runnable() {
 			@Override
 			public void run() {
-				Intent login = new Intent(Splashscreen.this, MainActivity.class);
+				Intent login = new Intent(Splashscreen.this, PembeliActivity.class);
 				startActivity(login);
 				finish();
 			}
