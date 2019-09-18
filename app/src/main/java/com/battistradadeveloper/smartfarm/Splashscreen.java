@@ -5,6 +5,8 @@ import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import com.battistradadeveloper.smartfarm.Admin.MainActivity;
+
 public class Splashscreen extends AppCompatActivity {
 	private int waktu_loading = 4000;
 	@Override

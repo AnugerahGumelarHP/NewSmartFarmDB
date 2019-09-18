@@ -1,4 +1,4 @@
-package com.battistradadeveloper.smartfarm.CRUD;
+package com.battistradadeveloper.smartfarm.Admin;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -7,39 +7,29 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.Menu;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 
+import com.battistradadeveloper.smartfarm.CRUD.LihatBeras;
+import com.battistradadeveloper.smartfarm.CRUD.UpdateBeras;
 import com.battistradadeveloper.smartfarm.Database.DataHelper;
 import com.battistradadeveloper.smartfarm.R;
 
-public class SeluruhBeras extends AppCompatActivity {
+public class BerasPutih extends AppCompatActivity {
 	String[] daftar;
 	ListView ListView01;
-	Menu menu;
 	protected Cursor cursor;
 	DataHelper dbcenter;
-	public static SeluruhBeras ma;
+	public static BerasPutih ma;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_seluruh_beras);
-		Button btn=(Button)findViewById(R.id.button2);
-
-		btn.setOnClickListener(new View.OnClickListener() {
-
-			@Override
-			public void onClick(View arg0) {
-				// TODO Auto-generated method stub
-				Intent new_data = new Intent(SeluruhBeras.this, Input.class);
-				startActivity(new_data);
-			}
-		});
+		setContentView(R.layout.activity_beras_putih);
+		Button btn= findViewById(R.id.button2);
 
 		ma = this;
 		dbcenter = new DataHelper(this);
@@ -48,12 +38,12 @@ public class SeluruhBeras extends AppCompatActivity {
 
 	public void RefreshList(){
 		SQLiteDatabase db = dbcenter.getReadableDatabase();
-		cursor = db.rawQuery("SELECT * FROM biodata",null);
+		cursor = db.rawQuery("SELECT * FROM biodata where jenis ='Beras Putih'",null);
 		daftar = new String[cursor.getCount()];
 		cursor.moveToFirst();
 		for (int cc=0; cc < cursor.getCount(); cc++){
 			cursor.moveToPosition(cc);
-			daftar[cc] = cursor.getString(1).toString();
+			daftar[cc] = cursor.getString(1);
 		}
 		ListView01 = findViewById(R.id.listView1);
 		ListView01.setAdapter(new ArrayAdapter(this, android.R.layout.simple_list_item_1, daftar));
@@ -64,7 +54,7 @@ public class SeluruhBeras extends AppCompatActivity {
 			public void onItemClick(AdapterView arg0, View arg1, int arg2, long arg3) {
 				final String selection = daftar[arg2]; //.getItemAtPosition(arg2).toString();
 				final CharSequence[] dialogitem = {"Lihat Biodata", "Update Biodata", "Hapus Biodata"};
-				AlertDialog.Builder builder = new AlertDialog.Builder(SeluruhBeras.this);
+				AlertDialog.Builder builder = new AlertDialog.Builder(BerasPutih.this);
 				builder.setTitle("Pilihan");
 				builder.setItems(dialogitem, new DialogInterface.OnClickListener() {
 					public void onClick(DialogInterface dialog, int item) {

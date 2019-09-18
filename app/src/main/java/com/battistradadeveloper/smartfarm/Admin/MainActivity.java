@@ -1,4 +1,4 @@
-package com.battistradadeveloper.smartfarm;
+package com.battistradadeveloper.smartfarm.Admin;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -9,8 +9,8 @@ import android.support.v7.widget.CardView;
 import android.view.View;
 import android.widget.GridLayout;
 
-import com.battistradadeveloper.smartfarm.CRUD.Input;
-import com.battistradadeveloper.smartfarm.CRUD.SeluruhBeras;
+import com.battistradadeveloper.smartfarm.MenuInput;
+import com.battistradadeveloper.smartfarm.R;
 
 public class MainActivity extends AppCompatActivity {
 	GridLayout mainGrid;
@@ -35,9 +35,33 @@ public class MainActivity extends AppCompatActivity {
 				startActivity(all_beras);
 			}
 		});
+
 		cd_putih = findViewById(R.id.card_putih);
+		cd_putih.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				Intent beras_putih = new Intent(MainActivity.this, BerasPutih.class);
+				startActivity(beras_putih);
+			}
+		});
+
 		cd_merah = findViewById(R.id.card_merah);
+		cd_merah.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				Intent beras_merah = new Intent(MainActivity.this, BerasMerah.class);
+				startActivity(beras_merah);
+			}
+		});
+
 		cd_hitam = findViewById(R.id.card_hitam);
+		cd_hitam.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				Intent beras_hitam = new Intent(MainActivity.this, BerasHitam.class);
+				startActivity(beras_hitam);
+			}
+		});
 
 		cd_input = findViewById(R.id.card_input);
 		cd_input.setOnClickListener(new View.OnClickListener() {

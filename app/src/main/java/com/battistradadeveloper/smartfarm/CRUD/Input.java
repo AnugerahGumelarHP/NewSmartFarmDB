@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 import com.battistradadeveloper.smartfarm.Database.DataHelper;
 import com.battistradadeveloper.smartfarm.R;
+import com.battistradadeveloper.smartfarm.Admin.SeluruhBeras;
 
 public class Input extends AppCompatActivity {
 	protected Cursor cursor;
