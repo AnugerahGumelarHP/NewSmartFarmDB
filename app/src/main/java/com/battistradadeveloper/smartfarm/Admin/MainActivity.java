@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.GridLayout;
 
 import com.battistradadeveloper.smartfarm.MenuInput;
+import com.battistradadeveloper.smartfarm.Pembeli.PembeliActivity;
 import com.battistradadeveloper.smartfarm.R;
 
 public class MainActivity extends AppCompatActivity {
@@ -84,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
 						.setPositiveButton("Yakin", new DialogInterface.OnClickListener() {
 							@Override
 							public void onClick(DialogInterface dialog, int which) {
-								Intent logoutproses = new Intent(MainActivity.this, MainActivity.class);
+								Intent logoutproses = new Intent(MainActivity.this, PembeliActivity.class);
 								startActivity(logoutproses);
 							}
 						})

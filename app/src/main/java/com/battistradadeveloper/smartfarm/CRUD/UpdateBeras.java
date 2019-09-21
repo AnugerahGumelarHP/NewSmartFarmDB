@@ -10,9 +10,9 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.battistradadeveloper.smartfarm.Admin.SeluruhBeras;
 import com.battistradadeveloper.smartfarm.Database.DataHelper;
 import com.battistradadeveloper.smartfarm.R;
-import com.battistradadeveloper.smartfarm.Admin.SeluruhBeras;
 
 public class UpdateBeras extends AppCompatActivity {
 	protected Cursor cursor;

@@ -1,4 +1,6 @@
 <resources>
+
+    <!--Spinner entries-->
     <array name="type">
         <item>Beras Putih</item>
         <item>Beras Merah</item>
@@ -8,6 +10,7 @@
         <item>Tahun ini</item>
         <item>Tahun lalu</item>
     </array>
+
     <string name="app_name">Smartfarm</string>
     <string name="welcome_to_smartfarm">Welcome to Smartfarm</string>
     <string name="introduction_smartfarm">Introduction Smartfarm</string>
