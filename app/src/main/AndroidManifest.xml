@@ -10,7 +10,10 @@
         android:roundIcon="@drawable/logoround"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Pembeli.Discover_Rice"></activity>
+        <activity android:name=".Pembeli.Discover_Rice_Hitam"></activity>
+        <activity android:name=".Pembeli.Discover_Rice_Merah" />
+        <activity android:name=".Pembeli.Discover_Rice_Putih" />
+        <activity android:name=".Pembeli.Discover_Rice" />
         <activity
             android:name=".Pembeli.PembeliActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
