@@ -24,13 +24,6 @@
         android:layout_margin="5dp">
         <requestFocus/>
     </SearchView>
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        style="?android:attr/borderlessButtonStyle"
-        android:drawableStart="@drawable/icon_add"
-        android:text="Buat List Beras Baru" />
     <ListView
         android:id="@+id/listView1"
         android:layout_width="match_parent"

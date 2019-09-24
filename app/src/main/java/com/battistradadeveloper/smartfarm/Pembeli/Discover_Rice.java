@@ -31,16 +31,6 @@ public class Discover_Rice extends AppCompatActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_discover__rice);
-		Button btn= findViewById(R.id.button2);
-		btn.setOnClickListener(new View.OnClickListener() {
-
-			@Override
-			public void onClick(View arg0) {
-				// TODO Auto-generated method stub
-				Intent new_data = new Intent(Discover_Rice.this, Input.class);
-				startActivity(new_data);
-			}
-		});
 
 		ma = this;
 		dbcenter = new DataHelper(this);
@@ -63,27 +53,15 @@ public class Discover_Rice extends AppCompatActivity {
 
 			public void onItemClick(AdapterView arg0, View arg1, int arg2, long arg3) {
 				final String selection = daftar[arg2]; //.getItemAtPosition(arg2).toString();
-				final CharSequence[] dialogitem = {"Lihat Biodata", "Update Biodata", "Hapus Biodata"};
+				final CharSequence[] dialogitem = {"Lihat Biodata"};
 				AlertDialog.Builder builder = new AlertDialog.Builder(Discover_Rice.this);
 				builder.setTitle("Pilihan");
 				builder.setItems(dialogitem, new DialogInterface.OnClickListener() {
 					public void onClick(DialogInterface dialog, int item) {
-						switch(item){
-							case 0 :
-								Intent i = new Intent(getApplicationContext(), LihatBeras.class);
-								i.putExtra("nama", selection);
-								startActivity(i);
-								break;
-							case 1 :
-								Intent in = new Intent(getApplicationContext(), UpdateBeras.class);
-								in.putExtra("nama", selection);
-								startActivity(in);
-								break;
-							case 2 :
-								SQLiteDatabase db = dbcenter.getWritableDatabase();
-								db.execSQL("delete from biodata where nama = '"+selection+"'");
-								RefreshList();
-								break;
+						if (item == 0) {
+							Intent i = new Intent(getApplicationContext(), LihatBeras.class);
+							i.putExtra("nama", selection);
+							startActivity(i);
 						}
 					}
 				});
