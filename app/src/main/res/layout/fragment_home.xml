@@ -16,14 +16,6 @@
             android:layout_weight="4"
             android:layout_width="match_parent"
             android:layout_height="0dp">
-            <!--Searchview untuk mencari query beras-->
-            <SearchView
-                android:id="@+id/searchview_main"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:queryHint="Menu beras sehat apa hari ini?"
-                android:padding="8dp"
-                android:layout_marginBottom="100dp"/>
             <ImageView
                 android:id="@+id/img_home"
                 android:layout_width="wrap_content"
