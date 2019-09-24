@@ -40,9 +40,6 @@ public class PembeliActivity extends AppCompatActivity implements BottomNavigati
 			case R.id.home:
 				fragment = new Home();
 				break;
-			case R.id.discover:
-				fragment = new Rice();
-				break;
 			case R.id.account_menu:
 				fragment = new Login();
 				break;
