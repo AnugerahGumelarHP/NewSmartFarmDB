@@ -13,9 +13,11 @@
 
     <string name="app_name">Smartfarm</string>
     <string name="welcome_to_smartfarm">Welcome to Smartfarm</string>
-    <string name="introduction_smartfarm">Introduction Smartfarm</string>
+    <string name="introduction_smartfarm"> Aplikasi pertukaran informasi seputar proses jual beli hasil panen di Kabupaten Bantul.
+        Petani dapat memanfaatkan teknologi informasi dan komunikasi untuk mengetahui berbagai informasi dan komunikasi untuk mengetahui informasi tentang proses jual beli hasil panen berupa beras.
+    </string>
     <string name="rekomendasi">Rekomendasi</string>
-    <string name="seluruh_beras">Seluruh Beras</string>
+    <string name="seluruh_beras">Semua</string>
     <string name="beras_putih">Beras Putih</string>
     <string name="beras_merah">Beras Merah</string>
     <string name="beras_hitam">Beras Hitam</string>
@@ -57,4 +59,6 @@
     <string name="password">Password</string>
     <string name="input_password">Masukkan Password Anda</string>
     <string name="login">LOGIN</string>
+    <string name="pilih_dari_kategori">Pilih dari kategori</string>
+    <string name="hidup_sehat_cek_beras_organiknya_kak">Hidup sehat? Cek beras organiknya kak!</string>
 </resources>
