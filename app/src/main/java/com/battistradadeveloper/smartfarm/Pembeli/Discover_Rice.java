@@ -10,17 +10,15 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.ListView;
-
-import com.battistradadeveloper.smartfarm.Admin.SeluruhBeras;
-import com.battistradadeveloper.smartfarm.CRUD.Input;
 import com.battistradadeveloper.smartfarm.CRUD.LihatBeras;
-import com.battistradadeveloper.smartfarm.CRUD.UpdateBeras;
 import com.battistradadeveloper.smartfarm.Database.DataHelper;
 import com.battistradadeveloper.smartfarm.R;
+import com.miguelcatalan.materialsearchview.MaterialSearchView;
+
 
 public class Discover_Rice extends AppCompatActivity {
+	MaterialSearchView search;
 	String[] daftar;
 	ListView ListView01;
 	protected Cursor cursor;
@@ -35,8 +33,11 @@ public class Discover_Rice extends AppCompatActivity {
 		ma = this;
 		dbcenter = new DataHelper(this);
 		RefreshList();
+
 	}
+
 	public void RefreshList(){
+		//Membaca keseluruhan file yang ada pada database
 		SQLiteDatabase db = dbcenter.getReadableDatabase();
 		cursor = db.rawQuery("SELECT * FROM biodata",null);
 		daftar = new String[cursor.getCount()];
@@ -48,11 +49,12 @@ public class Discover_Rice extends AppCompatActivity {
 		ListView01 = findViewById(R.id.listView1);
 		ListView01.setAdapter(new ArrayAdapter(this, android.R.layout.simple_list_item_1, daftar));
 		ListView01.setSelected(true);
+
+		//ListView dapat diklik untuk membaca file secara detail
 		ListView01.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-
-
 			public void onItemClick(AdapterView arg0, View arg1, int arg2, long arg3) {
 				final String selection = daftar[arg2]; //.getItemAtPosition(arg2).toString();
+				//Memunculkan fitur alert dialog yang berupa popup
 				final CharSequence[] dialogitem = {"Lihat Biodata"};
 				AlertDialog.Builder builder = new AlertDialog.Builder(Discover_Rice.this);
 				builder.setTitle("Pilihan");
@@ -68,6 +70,6 @@ public class Discover_Rice extends AppCompatActivity {
 				builder.create().show();
 			}});
 		((ArrayAdapter)ListView01.getAdapter()).notifyDataSetInvalidated();
-	}
 
+	}
 }

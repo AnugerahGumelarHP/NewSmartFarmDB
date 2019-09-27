@@ -7,23 +7,20 @@
     android:orientation="vertical"
     android:padding="@dimen/padding"
     tools:context=".Pembeli.Discover_Rice">
-    <TextView
-        android:id="@+id/txt_discover"
+
+    <com.miguelcatalan.materialsearchview.MaterialSearchView
+        android:id="@+id/search_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/discover"
-        android:textColor="@color/purple"
-        android:textSize="24sp"
-        android:textStyle="bold"/>
-    <SearchView
-        android:id="@+id/search"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:iconifiedByDefault="false"
-        android:queryHint="@string/search_hint"
-        android:layout_margin="5dp">
-        <requestFocus/>
-    </SearchView>
+        app:searchBackground="@color/colorPrimary"
+        app:searchSuggestionBackground="@color/colorPrimary"
+        app:searchCloseIcon="@drawable/ic_action_navigation_close_inverted"
+        app:searchBackIcon="@drawable/ic_action_navigation_arrow_back_inverted"
+        app:searchSuggestionIcon="@drawable/ic_suggestion"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        />
+
     <ListView
         android:id="@+id/listView1"
         android:layout_width="match_parent"
