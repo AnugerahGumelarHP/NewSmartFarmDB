@@ -12,6 +12,7 @@ import android.widget.GridLayout;
 import com.battistradadeveloper.smartfarm.MenuInput;
 import com.battistradadeveloper.smartfarm.Pembeli.PembeliActivity;
 import com.battistradadeveloper.smartfarm.R;
+import com.battistradadeveloper.smartfarm.RekomendasiMoora;
 
 public class MainActivity extends AppCompatActivity {
 	GridLayout mainGrid;
@@ -28,6 +29,13 @@ public class MainActivity extends AppCompatActivity {
 		mainGrid = findViewById(R.id.mainGrid);
 
 		cd_rekomendasi = findViewById(R.id.card_rekomendasi);
+		cd_rekomendasi.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				Intent moora = new Intent(MainActivity.this, RekomendasiMoora.class);
+				startActivity(moora);
+			}
+		});
 		cd_semua = findViewById(R.id.card_semua);
 		cd_semua.setOnClickListener(new View.OnClickListener() {
 			@Override

@@ -1,4 +1,4 @@
-package com.battistradadeveloper.smartfarm.Pembeli;
+package com.battistradadeveloper.smartfarm;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -12,47 +12,34 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+
+import com.battistradadeveloper.smartfarm.Admin.BerasPutih;
 import com.battistradadeveloper.smartfarm.CRUD.LihatBeras;
+import com.battistradadeveloper.smartfarm.CRUD.UpdateBeras;
 import com.battistradadeveloper.smartfarm.Database.DataHelper;
-import com.battistradadeveloper.smartfarm.R;
-import com.miguelcatalan.materialsearchview.MaterialSearchView;
 
-
-public class Discover_Rice extends AppCompatActivity {
-	MaterialSearchView search;
+public class RekomendasiMoora extends AppCompatActivity {
 	String[] daftar;
 	ListView ListView01;
 	protected Cursor cursor;
 	DataHelper dbcenter;
-	public static Discover_Rice ma;
-	Button btn_moora;
+	public RekomendasiMoora ma;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_discover__rice);
+		setContentView(R.layout.activity_rekomendasi_moora);
+
+		Button btn= findViewById(R.id.button2);
 
 		ma = this;
 		dbcenter = new DataHelper(this);
 		RefreshList();
-		btn_moora = findViewById(R.id.btn_moora);
-		btn_moora.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				Moora();
-			}
-		});
-	}
-
-	public void Moora(){
-		//TODO Moora Method
-
 	}
 
 	public void RefreshList(){
-		//Membaca keseluruhan file yang ada pada database
 		SQLiteDatabase db = dbcenter.getReadableDatabase();
-		cursor = db.rawQuery("SELECT * FROM biodata",null);
+		cursor = db.rawQuery("SELECT * FROM biodata where jenis ='Beras Putih'",null);
 		daftar = new String[cursor.getCount()];
 		cursor.moveToFirst();
 		for (int cc=0; cc < cursor.getCount(); cc++){
@@ -62,27 +49,38 @@ public class Discover_Rice extends AppCompatActivity {
 		ListView01 = findViewById(R.id.listView1);
 		ListView01.setAdapter(new ArrayAdapter(this, android.R.layout.simple_list_item_1, daftar));
 		ListView01.setSelected(true);
-
-		//ListView dapat diklik untuk membaca file secara detail
 		ListView01.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+
 			public void onItemClick(AdapterView arg0, View arg1, int arg2, long arg3) {
 				final String selection = daftar[arg2]; //.getItemAtPosition(arg2).toString();
-				//Memunculkan fitur alert dialog yang berupa popup
-				final CharSequence[] dialogitem = {"Lihat Biodata"};
-				AlertDialog.Builder builder = new AlertDialog.Builder(Discover_Rice.this);
+				final CharSequence[] dialogitem = {"Lihat Biodata", "Update Biodata", "Hapus Biodata"};
+				AlertDialog.Builder builder = new AlertDialog.Builder(RekomendasiMoora.this);
 				builder.setTitle("Pilihan");
 				builder.setItems(dialogitem, new DialogInterface.OnClickListener() {
 					public void onClick(DialogInterface dialog, int item) {
-						if (item == 0) {
-							Intent i = new Intent(getApplicationContext(), LihatBeras.class);
-							i.putExtra("nama", selection);
-							startActivity(i);
+						switch(item){
+							case 0 :
+								Intent i = new Intent(getApplicationContext(), LihatBeras.class);
+								i.putExtra("nama", selection);
+								startActivity(i);
+								break;
+							case 1 :
+								Intent in = new Intent(getApplicationContext(), UpdateBeras.class);
+								in.putExtra("nama", selection);
+								startActivity(in);
+								break;
+							case 2 :
+								SQLiteDatabase db = dbcenter.getWritableDatabase();
+								db.execSQL("delete from biodata where nama = '"+selection+"'");
+								RefreshList();
+								break;
 						}
 					}
 				});
 				builder.create().show();
 			}});
 		((ArrayAdapter)ListView01.getAdapter()).notifyDataSetInvalidated();
-
 	}
+
 }

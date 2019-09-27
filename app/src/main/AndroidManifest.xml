@@ -10,6 +10,7 @@
         android:roundIcon="@drawable/logoround"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".RekomendasiMoora"></activity>
         <activity
             android:name=".Splashscreen"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
@@ -19,7 +20,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Pembeli.Discover_Rice_Hitam"></activity>
+        <activity android:name=".Pembeli.Discover_Rice_Hitam" />
         <activity android:name=".Pembeli.Discover_Rice_Merah" />
         <activity android:name=".Pembeli.Discover_Rice_Putih" />
         <activity android:name=".Pembeli.Discover_Rice" />
@@ -46,7 +47,6 @@
         <activity android:name=".Admin.BerasHitam" />
         <activity android:name=".Admin.BerasMerah" />
         <activity android:name=".Admin.BerasPutih" />
-
     </application>
 
     <uses-permission android:name="android.permission.INTERNET" />
